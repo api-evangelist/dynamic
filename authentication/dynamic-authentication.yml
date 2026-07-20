@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/docs/api-reference
+docs: https://www.dynamic.xyz/docs/api-reference
+notes: >-
+  Derived from the Dynamic REST API reference (per-endpoint OpenAPI fragments).
+  No single machine-readable OpenAPI document is published; the reference is
+  split across ~944 doc pages. The API uses bearer API tokens issued from the
+  Dynamic dashboard. Two named token schemes appear: dashboard project/API
+  Tokens (admin endpoints) and User API Tokens (user-scoped access).
+summary:
+  types: [http]
+  http_scheme: bearer
+  bearer_source: dashboard-issued API tokens
+  api_key_in: [header]
+  header: Authorization
+  oauth2_flows: []
+schemes:
+- name: Tokens
+  type: http
+  scheme: bearer
+  description: >-
+    Project/API bearer tokens generated in the Dynamic dashboard, used to
+    authenticate admin and environment-management REST endpoints.
+  in: header
+  header: Authorization
+  format: 'Bearer <token>'
+  sources: [https://www.dynamic.xyz/docs/api-reference]
+- name: UserApiTokens
+  type: http
+  scheme: bearer
+  description: >-
+    User-scoped API tokens for calling user/SDK-facing endpoints on behalf of an
+    authenticated end user.
+  in: header
+  header: Authorization
+  format: 'Bearer <token>'
+  sources: [https://www.dynamic.xyz/docs/api-reference]
+end_user_auth:
+  description: >-
+    End-user authentication (the product surface, distinct from API access) is
+    handled by the SDKs and supports email/SMS OTP, social/OAuth login,
+    passkeys, external wallet connection, and MFA (authenticator app, SMS,
+    passkeys, email OTP, TOTP). JWTs issued to end users are verifiable and an
+    External JWT admin endpoint exists for BYO-auth setups.
