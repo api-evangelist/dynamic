@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/docs + https://status.dynamic.xyz/
+versioning:
+  scheme: uri-path
+  current: v0
+  base: https://app.dynamicauth.com/api/v0
+  sdk_major: '4'
+  notes: >-
+    REST API is served under a /api/v0 path prefix. Frontend/backend SDKs share
+    a 4.x version line. Rust and Java server SDKs are marked beta.
+status_page: https://status.dynamic.xyz/
+sla:
+  uptime_target: '99.9%'
+  source: https://www.dynamic.xyz/security
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: >-
+    No formal, published deprecation/Sunset-header (RFC 8594) policy was found
+    at probe time. Not asserted.
+deprecated_operations: []

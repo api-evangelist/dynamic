@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/security + https://www.dynamic.xyz/docs
+notes: >-
+  Compliance posture searched from the Dynamic security page; cross-cutting
+  API standards derived from the documented auth/webhook model. Dynamic holds
+  SOC 2 Type II (Feb 2025) and runs recurring third-party audits (Cure53,
+  Trail of Bits) plus a Bugcrowd bug bounty. No ISO 27001 / PCI DSS / HIPAA /
+  FedRAMP claim was found and none is asserted.
+compliance:
+  soc2_type_ii:
+    conforms: true
+    since: '2025-02'
+    evidence: https://www.dynamic.xyz/security
+  iso_27001:
+    conforms: false
+  pci_dss:
+    conforms: false
+  hipaa:
+    conforms: false
+  fedramp:
+    conforms: false
+audits:
+- firm: Cure53
+  dates: ['2024-09', '2025-04']
+- firm: Trail of Bits
+  dates: ['2025-07']
+bug_bounty:
+  program: Bugcrowd
+  report_url: https://www.dynamic.xyz/submit-bug-bounty-report
+standards:
+- id: oauth2
+  conforms: false
+  evidence: REST API uses bearer API tokens, not an oauth2 authorization server.
+- id: bearer-token-http
+  conforms: true
+  evidence: Authorization Bearer token scheme on all REST endpoints.
+- id: jwt
+  conforms: true
+  evidence: End-user JWTs are issued and verifiable; External JWT (BYO-auth) supported.
+- id: webhooks
+  conforms: true
+  evidence: Environment-event webhook subscriptions with delivery tracking and redelivery.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: JSON errors returned; a problem+json contract was not confirmed.

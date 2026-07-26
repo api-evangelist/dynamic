@@ -1,0 +1,48 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/changelog
+scheme: dated
+cadence: rolling (monthly clusters)
+current_sdk_line: '4.x'
+notes: >-
+  Recent-window capture of the public Dynamic changelog. The live changelog is
+  the source of truth; only the recent entries are structured here.
+entries:
+- date: '2026-06'
+  highlight: >-
+    Fireblocks Flow — infrastructure to help merchants accept payments in any
+    digital asset.
+  type: addition
+- date: '2026-06'
+  highlight: >-
+    Dynamic CLI — script and automate setup with 200+ commands covering
+    environments, wallets, auth, and webhooks.
+  type: addition
+- date: '2026-05'
+  highlight: >-
+    Rust & Java SDKs — create wallets and build agentic workflows server-side
+    (beta).
+  type: addition
+- date: '2026-05'
+  highlight: >-
+    Agent Payments — autonomous token swapping via x402 to avoid waiting on
+    human intervention.
+  type: addition
+- date: '2026-05'
+  highlight: 'Python SDK — server-side wallet creation and agentic workflows.'
+  type: addition
+- date: '2026-05'
+  highlight: >-
+    Swapping and Bridging — cross-chain and cross-token swaps with routing,
+    execution, and failover abstracted away.
+  type: addition
+- date: '2026-05'
+  highlight: >-
+    Embedded Wallets via Raw Signing — support for any blockchain through
+    signature generation without additional keys.
+  type: addition
+- date: '2026-05'
+  highlight: >-
+    Admin Action Approvals — dual-control workflow with approval queuing and
+    audit trails for sensitive actions.
+  type: addition

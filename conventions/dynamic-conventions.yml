@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/docs/api-reference
+notes: >-
+  Cross-cutting request/response semantics for the Dynamic REST API, captured
+  from the API reference and docs. No documented idempotency-key contract was
+  found, so no Idempotency claim is made. Cross-links: authentication/,
+  lifecycle/, asyncapi/ (webhooks).
+authentication:
+  style: bearer
+  header: Authorization
+  detail: authentication/dynamic-authentication.yml
+versioning:
+  style: uri-path
+  base: https://app.dynamicauth.com/api/v0
+  detail: lifecycle/dynamic-lifecycle.yml
+scoping:
+  model: >-
+    Resources are scoped to a project environment (sandbox vs live). Most admin
+    endpoints operate on an environmentId; the CLI can diff sandbox against live.
+idempotency:
+  supported: unknown
+  header: null
+  notes: No documented idempotency-key header/contract found at probe time.
+pagination:
+  style: unknown
+  notes: >-
+    List endpoints exist (users, wallets, webhooks, messages) but a single
+    documented pagination convention was not confirmed from the split reference.
+error_envelope:
+  format: json
+  notes: >-
+    Errors are returned as JSON. A single RFC 9457 problem+json contract was not
+    confirmed across the reference.
+webhooks:
+  supported: true
+  detail: asyncapi/dynamic-webhooks.yml
+  delivery_targets: [https-url, aws-sns-arn]
+  redelivery: true

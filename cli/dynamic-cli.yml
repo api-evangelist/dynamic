@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/docs/cli
+name: Dynamic CLI
+binary: dyn
+description: >-
+  The official Dynamic command-line client. Every operation available in the
+  dashboard is available as a `dyn` command — 200+ commands spanning auth
+  providers, users, webhooks, chains, custom fields, environments, projects,
+  members, MFA, allowlists, custom hostnames, and gates. Used to script tasks,
+  diff sandbox against live, drive Dynamic from CI, and manage configuration as
+  code.
+requirements:
+  runtime: Node.js 18+
+  account: Dynamic account (authenticates through the browser against the dashboard)
+install:
+- method: npm
+  command: npm install -g @dynamic-labs/dynamic-console-cli
+  package: "@dynamic-labs/dynamic-console-cli"
+first_commands:
+- command: dyn auth login
+  description: Authenticate through your browser
+- command: dyn status
+  description: Show the active organization, project, and environment
+- command: dyn settings list
+  description: Discover every configurable project setting
+command_groups:
+- auth providers
+- users
+- webhooks
+- chains
+- custom fields
+- environments
+- projects
+- members
+- MFA
+- allowlists
+- custom hostnames
+- gates
+- settings
+key_flows:
+- Manage configuration as code
+- Diff sandbox against live environments
+- Drive Dynamic from CI pipelines

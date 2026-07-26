@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+notes: >-
+  Probed the .well-known discovery surface on the marketing/docs host
+  (www.dynamic.xyz) and the API host (app.dynamicauth.com). No .well-known
+  documents were served (all 404). app.dynamicauth.com issues a 302 redirect on
+  these paths rather than serving a document. Absence is recorded as valid data;
+  no raw files saved.
+hosts:
+- host: https://www.dynamic.xyz
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://app.dynamicauth.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+  - path: /.well-known/openid-configuration
+    status: 302

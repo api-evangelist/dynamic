@@ -1,0 +1,47 @@
+generated: '2026-07-18'
+method: searched
+type: Webhooks
+source: https://www.dynamic.xyz/docs/api-reference/webhooks
+notes: >-
+  Dynamic documents a webhook subscription surface for environment events but
+  does not publish an AsyncAPI document — captured as a webhook catalog rather
+  than fabricating a spec. Webhooks are created and managed per project
+  environment; delivery targets are validated as HTTPS URLs or AWS SNS ARNs.
+  Message delivery is tracked with redelivery support. Event/message payloads
+  cover users and wallets (created/updated/deleted-style changes) among other
+  environment events.
+delivery:
+  targets:
+  - https-url
+  - aws-sns-arn
+  target_pattern: >-
+    ^(https:\/\/)[a-z0-9]+([-.]+[a-z0-9]+)*\.[a-z]{2,10}(\/.*)?$|^arn:aws:sns:[a-z0-9-]*:[0-9]{12}:[a-zA-Z0-9-_]+$
+  redelivery: true
+  delivery_tracking: true
+management_endpoints:
+  base: https://app.dynamicauth.com/api/v0
+  operations:
+  - method: POST
+    summary: Create a new webhook for the project environment
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/creates-a-new-webhooks-for-the-project-environment
+  - method: GET
+    summary: Get the webhooks for an environment
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/get-the-webhooks-for-an-environment
+  - method: GET
+    summary: Get a single webhook for an environment
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/get-the-webhook-for-an-environment
+  - method: PUT
+    summary: Update the webhook for an environment
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/update-the-webhook-for-an-environment
+  - method: DELETE
+    summary: Delete the webhook for an environment
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/delete-the-webhook-for-an-environment
+  - method: GET
+    summary: Get the messages for a webhook
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/get-the-messages-for-an-webhook
+  - method: GET
+    summary: Get the message deliveries for a webhook
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/get-the-message-deliveries-for-a-webhook
+  - method: POST
+    summary: Redeliver a message for a webhook
+    docs: https://www.dynamic.xyz/docs/api-reference/webhooks/redeliver-message-for-an-webhook

@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/docs/react
+notes: >-
+  Prebuilt, embeddable client-side UI components shipped by the Dynamic React
+  SDK (distinct from the server-side SDKs in packages/). Rendered inside a
+  DynamicContextProvider. Names verified against the React SDK docs index.
+loader:
+  library: "@dynamic-labs/sdk-react-core"
+  provider: DynamicContextProvider
+families:
+- family: Authentication & wallet UI
+  components:
+  - name: DynamicWidget
+    description: >-
+      Drop-in login/wallet widget rendering the full auth + connected-wallet
+      flow.
+  - name: DynamicEmbeddedWidget
+    description: Inline (non-modal) embedded variant of the auth/wallet widget.
+  - name: DynamicConnectButton
+    description: Custom trigger that opens the Dynamic auth/connect flow.
+  - name: DynamicUserProfile
+    description: Prebuilt authenticated-user profile / account management surface.
+  - name: DynamicMultiWalletPromptsWidget
+    description: UI for multi-wallet connection prompts and management.

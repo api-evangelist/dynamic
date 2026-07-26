@@ -1,0 +1,60 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.dynamic.xyz/docs + https://www.npmjs.com/org/dynamic-labs
+notes: >-
+  First-party Dynamic client libraries. React/JS SDKs share a lockstep version
+  line (4.x). Server-side wallet SDK is published under @dynamic-labs-wallet.
+  Python, Rust, and Java server SDKs are documented but were not found as
+  first-party packages on public registries at probe time (delivered via docs
+  install flows) and are omitted rather than guessed.
+packages:
+- language: javascript
+  registry: npm
+  name: "@dynamic-labs/sdk-react-core"
+  url: https://www.npmjs.com/package/@dynamic-labs/sdk-react-core
+  install: npm install @dynamic-labs/sdk-react-core
+  official: true
+  category: react-sdk
+- language: javascript
+  registry: npm
+  name: "@dynamic-labs/client"
+  url: https://www.npmjs.com/package/@dynamic-labs/client
+  install: npm install @dynamic-labs/client
+  official: true
+  category: core-sdk
+- language: javascript
+  registry: npm
+  name: "@dynamic-labs/ethereum"
+  url: https://www.npmjs.com/package/@dynamic-labs/ethereum
+  install: npm install @dynamic-labs/ethereum
+  official: true
+  category: chain-connector
+- language: javascript
+  registry: npm
+  name: "@dynamic-labs/solana"
+  url: https://www.npmjs.com/package/@dynamic-labs/solana
+  install: npm install @dynamic-labs/solana
+  official: true
+  category: chain-connector
+- language: javascript
+  registry: npm
+  name: "@dynamic-labs/sdk-api-core"
+  url: https://www.npmjs.com/package/@dynamic-labs/sdk-api-core
+  install: npm install @dynamic-labs/sdk-api-core
+  official: true
+  category: api-sdk
+- language: javascript
+  registry: npm
+  name: "@dynamic-labs-wallet/node"
+  url: https://www.npmjs.com/package/@dynamic-labs-wallet/node
+  install: npm install @dynamic-labs-wallet/node
+  official: true
+  category: server-sdk
+- language: javascript
+  registry: npm
+  name: "@dynamic-labs/dynamic-console-cli"
+  url: https://www.npmjs.com/package/@dynamic-labs/dynamic-console-cli
+  install: npm install -g @dynamic-labs/dynamic-console-cli
+  official: true
+  category: cli
+  binary: dyn

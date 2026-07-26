@@ -1,22 +1,144 @@
 aid: dynamic
 name: Dynamic
-description: Dynamic is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Dynamic is a wallet infrastructure platform for fintech, crypto, and
+  stablecoin applications, letting companies embed non-custodial wallets,
+  connect 800+ external wallets, run distributed (TSS-MPC) key management, and
+  build onchain products such as crypto payments, trading, yield, and global
+  money movement without in-house crypto expertise. Developers integrate through
+  a full stack that ranges from low-level REST APIs to prebuilt UI SDKs for
+  React, JavaScript, React Native, Flutter, Swift, Kotlin, Unity, and
+  server-side Node, Python, Rust, and Java, plus a `dyn` CLI, an official
+  documentation MCP server, and webhooks for environment events. The REST API is
+  organized into admin and SDK endpoints for environments, users, wallets,
+  sessions, MFA, gates, and Wallet-as-a-Service (WaaS). Dynamic was backed by
+  a16z and was acquired by Fireblocks in October 2025.
 url: https://raw.githubusercontent.com/api-evangelist/dynamic/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/626692727bba3f384e008e8a/67efcc8f11a9608cf3084bc3_328d77e78384deddd386bc6036ac7cc3_shared-img-home.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-acquired-by: Fireblocks
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Wallet Infrastructure
+- Web3
+- Crypto
+- Authentication
+- Embedded Wallets
+- Stablecoins
+- Key Management
+- MPC
+- Developer Tools
+- Fintech
+- Blockchain
+apis:
+- name: Dynamic REST API
+  description: >-
+    Dynamic's REST API for wallet infrastructure — admin and environment
+    management endpoints plus SDK-facing endpoints for auth, passkeys, embedded
+    wallets, MPC/WaaS, users, sessions, MFA, gates, and webhooks. Authenticated
+    with bearer API tokens issued from the Dynamic dashboard.
+  humanURL: https://www.dynamic.xyz/docs/api-reference
+  baseURL: https://app.dynamicauth.com/api/v0
+  tags:
+  - Wallet Infrastructure
+  - Authentication
+  - Embedded Wallets
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://www.dynamic.xyz/docs
+  - type: APIReference
+    url: https://www.dynamic.xyz/docs/api-reference
+  - type: Authentication
+    url: authentication/dynamic-authentication.yml
+  - type: Webhooks
+    url: asyncapi/dynamic-webhooks.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DeveloperPortal
+  url: https://www.dynamic.xyz/docs
+- type: Documentation
+  url: https://www.dynamic.xyz/docs
+- type: APIReference
+  url: https://www.dynamic.xyz/docs/api-reference
+- type: GettingStarted
+  url: https://www.dynamic.xyz/docs/overview/introduction/welcome
+- type: Blog
+  url: https://www.dynamic.xyz/blog
+- type: SignUp
+  url: https://app.dynamic.xyz/
+- type: Login
+  url: https://app.dynamic.xyz/
+- type: Pricing
+  url: https://www.dynamic.xyz/pricing
+- type: TermsOfService
+  url: https://www.dynamic.xyz/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.dynamic.xyz/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/dynamic-labs
+- type: StatusPage
+  url: https://status.dynamic.xyz/
+- type: ChangeLog
+  url: changelog/dynamic-changelog.yml
+- type: MCPServer
+  url: mcp/dynamic-mcp.yml
+- type: CLI
+  url: cli/dynamic-cli.yml
+- type: Packages
+  url: packages/dynamic-packages.yml
+- type: SDKs
+  url: packages/dynamic-packages.yml
+- type: LLMsTxt
+  url: llms/dynamic-llms.txt
+- type: Authentication
+  url: authentication/dynamic-authentication.yml
+- type: Conventions
+  url: conventions/dynamic-conventions.yml
+- type: Lifecycle
+  url: lifecycle/dynamic-lifecycle.yml
+- type: Webhooks
+  url: asyncapi/dynamic-webhooks.yml
+- type: Components
+  url: components/dynamic-components.yml
+- type: Conformance
+  url: conformance/dynamic-conformance.yml
+- type: Compliance
+  url: https://www.dynamic.xyz/security
+- type: TrustCenter
+  url: security/dynamic-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/dynamic-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.dynamic.xyz/submit-bug-bounty-report
+- type: DomainSecurity
+  url: security/dynamic-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
