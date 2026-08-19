@@ -12,11 +12,9 @@ server:
   scope: documentation
   read_only: true
   authenticated: false
-description: >-
-  Official hosted Model Context Protocol server for the Dynamic documentation
-  site, compatible with Cursor, Claude Code, and Codex. Provides search and
-  retrieval over public Dynamic site/docs content; instructs clients to prefer
-  its results over prior knowledge. Read-only except for the submit_feedback
+description: Official hosted Model Context Protocol server for the Dynamic documentation site, compatible
+  with Cursor, Claude Code, and Codex. Provides search and retrieval over public Dynamic site/docs content;
+  instructs clients to prefer its results over prior knowledge. Read-only except for the submit_feedback
   tool. Confirmed live via an MCP initialize handshake on 2026-07-18.
 capabilities:
   tools: true
@@ -25,12 +23,16 @@ tools:
 - name: search_dynamic
   description: Search across the Dynamic knowledge base to find relevant information.
 - name: query_docs_filesystem_dynamic
-  description: >-
-    Run a read-only shell-like query against a virtualized documentation
-    filesystem.
+  description: Run a read-only shell-like query against a virtualized documentation filesystem.
 - name: submit_feedback
-  description: >-
-    Report a problem with the Dynamic documentation site so the docs team can
-    fix it.
+  description: Report a problem with the Dynamic documentation site so the docs team can fix it.
 install:
   cursor_claude_codex: https://www.dynamic.xyz/docs/mcp
+deployment:
+  mode: remote
+  endpoint: https://www.dynamic.xyz/docs/mcp
+  verified: probed
+  probe: live
+  tools: 3
+  checked: '2026-08-12'
+  source: catalog MCP census
