@@ -63,6 +63,11 @@ apis:
   - Wallet Infrastructure
   - Authentication
   - Embedded Wallets
+  - Webhook
+  tags_raw:
+  - Wallet Infrastructure
+  - Authentication
+  - Embedded Wallets
   - Webhooks
   properties:
   - type: Documentation
